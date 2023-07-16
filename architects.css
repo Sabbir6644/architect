@@ -1,12 +1,20 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Styles */
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     flex-direction: column;
 }
 
-header {
+.header-container {
     padding: 50px 240px;
     background-color: rgba(255, 144, 14, 0.10);
     margin-bottom: 50px;
@@ -16,7 +24,6 @@ nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
-
 }
 
 nav ul {
@@ -28,7 +35,6 @@ nav ul li {
     list-style: none;
     margin-right: 15px;
     font-size: 1rem;
-
 }
 
 li>a {
@@ -73,10 +79,8 @@ img {
     margin: auto;
     width: 100%;
     margin-top: 20px;
-
 }
 
-/* 1st section */
 .terms-container {
     display: flex;
     margin: auto;
@@ -85,8 +89,15 @@ img {
     justify-content: center;
 }
 
-.terms-container>div {
-    width: 50%;
+.image-container {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    margin-left: 30px;
+}
+
+.image-container img {
+    border-radius: 10px;
 }
 
 .terms-description {
@@ -95,7 +106,6 @@ img {
 
 .terms {
     padding: 80px 0px 0px 30px;
-
 }
 
 .terms-title {
@@ -110,73 +120,58 @@ img {
     color: orange;
 }
 
-.image-containe {
-    display: grid;
-    gap: 10px;
-    grid-template-columns: repeat(2, 1fr);
-    margin-left: 30px;
-}
-
-.image-containe img {
-    border-radius: 10px;
-}
-/* Section 3 Start */
-
 .section {
     display: flex;
     width: 100%;
-  }
- 
-  
-  .left-div {
-    flex: 1;
-    padding: 20px;
-    width: 100%;
-  }
-  
-  .right-div {
-    flex: 1;
-    padding: 20px;
-    width: 100%;
+}
 
-  }
-  
-  .title {
+.left-div {
+    flex: 1;
+    padding: 20px;
+    width: 100%;
+}
+
+.right-div {
+    flex: 1;
+    padding: 20px;
+    width: 100%;
+}
+
+.title {
     font-size: 45px;
     font-weight: bold;
     margin-bottom: 10px;
     max-width: 468px;
     border-left: 2px solid orange;
     padding-left: 10px;
-  }
-  
-  .description {
+}
+
+.description {
     font-size: 16px;
     margin-bottom: 20px;
     max-width: 586px;
-  }
-  
-  .card {
+}
+
+.card {
     background-color: #fff;
     padding: 30px;
     margin-bottom: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     max-width: 586px;
     max-height: 171px;
+}
 
-  }
-  
-  .card-title {
+.card-title {
     font-size: 1.4rem;
     font-weight: bold;
     margin-bottom: 10px;
-  }
-  
-  .card-description {
+}
+
+.card-description {
     font-size: 1rem;
-  }
-  
-  .orange-card {
+}
+
+.orange-card {
     background-color: orange;
     color: #fff;
     width: 300px;
@@ -185,25 +180,22 @@ img {
     text-align: center;
     position: relative;
     top: -100px;
+}
 
-
-  }
-  .orange-card .card-title{
+.orange-card .card-title {
     font-size: 4rem;
-  }
-  .orange-card .card-description{
+}
+
+.orange-card .card-description {
     font-size: 1.8rem;
-  }
-  
-  .image {
+}
+
+.image {
     max-width: 708px;
     max-height: 700px;
     margin-left: 30px;
-    
+}
 
-  }
-/* Section 3 End */
-/* section 4 styles */
 .facts h2 {
     margin-bottom: 0;
 }
@@ -241,30 +233,31 @@ img {
     font-size: 1.2rem;
     margin: 0;
 }
-/* sponson Section */
-.sponsor-section{
+
+.sponsor-section {
     text-align: center;
 }
-.sponsor-title{
-    /* text-align: center; */
+
+.sponsor-title {
     font-size: 2.8rem;
     margin-bottom: 0;
 }
-.sponsor-description{
-    /* text-align: center; */
+
+.sponsor-description {
     font-size: 1.25rem;
 }
 
-.sponsor-img{
+.sponsor-img {
     display: flex;
     justify-content: space-evenly;
 }
-.sponsor{
+
+.sponsor {
     max-width: 167px;
 }
 
 @media screen and (max-width: 576px) {
-    header {
+    .header-container {
         padding: 20px;
     }
 
@@ -273,10 +266,12 @@ img {
     .fact-box {
         flex-direction: column;
     }
+
     .sponsor-img-section {
         display: flex;
         justify-content: center;
     }
+
     .banner-img,
     img {
         width: 90%;
@@ -288,12 +283,12 @@ img {
         width: 100%;
     }
 
-    .image-containe {
+    .image-container {
         grid-template-columns: 1fr;
         margin-left: 0px;
     }
 
-    .image-containe img {
+    .image-container img {
         width: 90%;
     }
 
@@ -303,7 +298,6 @@ img {
 
     .terms {
         padding: 20px 0px;
-
     }
 
     .terms-btn {
@@ -312,17 +306,18 @@ img {
 
     .fact-box {
         gap: 20px;
-      padding-left: 30px;
+        padding-left: 30px;
     }
+
     .section {
         flex-direction: column;
         width: 90%;
-      }
+    }
 }
 
-/* tablet or medium devices */
-@media screen and (min-width:576px) and (max-width: 960px) {
-    header {
+/* Tablet or Medium Devices */
+@media screen and (min-width: 576px) and (max-width: 960px) {
+    .header-container {
         padding: 50px;
     }
 
@@ -335,17 +330,16 @@ img {
         width: 100%;
     }
 
-    .image-containe {
+    .image-container {
         grid-template-columns: repeat(1, 1fr);
         margin-left: 0px;
     }
 
-    .image-containe img {
-        width: 90%;
-        margin: auto;
+    .image-container img {
+    width: 90%;
+    margin: auto;
     }
-
     .terms-btn {
         text-align: center;
     }
-}
+    
